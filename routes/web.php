@@ -13,6 +13,30 @@ Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
 
+Route::view('Clientes', 'entities.Clientes')
+    ->middleware(['auth', 'verified'])
+    ->name('Clientes');
+
+Route::view('Enderecos', 'entities.Enderecos')
+    ->middleware(['auth', 'verified'])
+    ->name('Enderecos');
+
+Route::view('Produtos', 'entities.Produtos')
+    ->middleware(['auth', 'verified'])
+    ->name('Produtos');
+
+Route::view('Vendas', 'entities.Vendas')
+    ->middleware(['auth', 'verified'])
+    ->name('Vendas');
+
+Route::view('Pagamentos', 'entities.Pagamentos')
+    ->middleware(['auth', 'verified'])
+    ->name('Pagamentos');
+
+Route::view('Estoques', 'entities.Estoques')
+    ->middleware(['auth', 'verified'])
+    ->name('Estoques');
+
 Route::middleware(['auth'])->group(function () {
     Route::redirect('settings', 'settings/profile');
 

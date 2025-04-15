@@ -12,14 +12,38 @@
             </a>
 
             <flux:navlist variant="outline">
-                <flux:navlist.group :heading="__('Platform')" class="grid">
+                <flux:navlist.group :heading="__('Menu')" class="grid">
                     <flux:navlist.item icon="home" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>{{ __('Dashboard') }}</flux:navlist.item>
+                </flux:navlist.group>
+
+                <flux:navlist.group class="grid mb-4 mt-4">
+                    <flux:navlist.item icon="users" :href="route('Clientes')" :current="request()->routeIs('Clientes')" wire:navigate>{{ __('Clientes') }}</flux:navlist.item>
+                </flux:navlist.group>
+
+                <flux:navlist.group class="grid mb-4">
+                    <flux:navlist.item icon="building-office-2" :href="route('Enderecos')" :current="request()->routeIs('Enderecos')" wire:navigate>{{ __('Endereços') }}</flux:navlist.item>
+                </flux:navlist.group>
+
+                <flux:navlist.group class="grid mb-4">
+                    <flux:navlist.item icon="shopping-bag" :href="route('Produtos')" :current="request()->routeIs('Produtos')" wire:navigate>{{ __('Produtos') }}</flux:navlist.item>
+                </flux:navlist.group>
+
+                <flux:navlist.group class="grid mb-4">
+                    <flux:navlist.item icon="shopping-cart" :href="route('Vendas')" :current="request()->routeIs('Vendas')" wire:navigate>{{ __('Vendas') }}</flux:navlist.item>
+                </flux:navlist.group>
+
+                <flux:navlist.group class="grid mb-4">
+                    <flux:navlist.item icon="credit-card" :href="route('Pagamentos')" :current="request()->routeIs('Pagamentos')" wire:navigate>{{ __('Pagamentos') }}</flux:navlist.item>
+                </flux:navlist.group>
+
+                <flux:navlist.group class="grid">
+                    <flux:navlist.item icon="inbox-stack" :href="route('Estoques')" :current="request()->routeIs('Estoques')" wire:navigate>{{ __('Estoque') }}</flux:navlist.item>
                 </flux:navlist.group>
             </flux:navlist>
 
             <flux:spacer />
 
-            <flux:navlist variant="outline">
+            <!--<flux:navlist variant="outline">
                 <flux:navlist.item icon="folder-git-2" href="https://github.com/laravel/livewire-starter-kit" target="_blank">
                 {{ __('Repository') }}
                 </flux:navlist.item>
@@ -27,7 +51,7 @@
                 <flux:navlist.item icon="book-open-text" href="https://laravel.com/docs/starter-kits" target="_blank">
                 {{ __('Documentation') }}
                 </flux:navlist.item>
-            </flux:navlist>
+            </flux:navlist>-->
 
             <!-- Desktop User Menu -->
             <flux:dropdown position="bottom" align="start">
