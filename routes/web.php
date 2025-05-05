@@ -13,27 +13,27 @@ Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
 
-Route::view('Clientes', 'entities.Clientes')
+Route::view('Clientes', 'entities.clientes.Clientes')
     ->middleware(['auth', 'verified'])
     ->name('Clientes');
 
-Route::view('Enderecos', 'entities.Enderecos')
+Route::view('Enderecos', 'entities.enderecos.Enderecos')
     ->middleware(['auth', 'verified'])
     ->name('Enderecos');
 
-Route::view('Produtos', 'entities.Produtos')
+Route::view('Produtos', 'entities.produtos.Produtos')
     ->middleware(['auth', 'verified'])
     ->name('Produtos');
 
-Route::view('Vendas', 'entities.Vendas')
+Route::view('Vendas', 'entities.vendas.Vendas')
     ->middleware(['auth', 'verified'])
     ->name('Vendas');
 
-Route::view('Pagamentos', 'entities.Pagamentos')
+Route::view('Pagamentos', 'entities.pagamentos.Pagamentos')
     ->middleware(['auth', 'verified'])
     ->name('Pagamentos');
 
-Route::view('Estoques', 'entities.Estoques')
+Route::view('Estoques', 'entities.estoques.Estoques')
     ->middleware(['auth', 'verified'])
     ->name('Estoques');
 
