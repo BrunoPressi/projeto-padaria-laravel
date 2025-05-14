@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Endereços extends Model
+class Enderecos extends Model
 {
     protected $table = 'enderecos';
     protected $fillable = ['numero', 'rua', 'bairro'];

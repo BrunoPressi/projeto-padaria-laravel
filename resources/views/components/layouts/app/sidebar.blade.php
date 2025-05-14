@@ -17,7 +17,7 @@
                 </flux:navlist.group>
 
                 <flux:navlist.group class="grid mb-4 mt-4">
-                    <flux:navlist.item icon="users" :href="route('Clientes')" :current="request()->routeIs('Clientes')" wire:navigate>{{ __('Clientes') }}</flux:navlist.item>
+                    <flux:navlist.item icon="users" :href="route('clientes.index')" :current="request()->routeIs('Clientes')" wire:navigate>{{ __('Clientes') }}</flux:navlist.item>
                 </flux:navlist.group>
 
                 <flux:navlist.group class="grid mb-4">
