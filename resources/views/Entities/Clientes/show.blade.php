@@ -1,5 +1,5 @@
 <x-layouts.app :title="__('Clientes Show')">
-    <h1 class="flex justify-center mb-4">Clientee</h1>
+    <h1 class="flex justify-center mb-4">Cliente</h1>
     <div class="overflow-x-auto flex justify-center">
         <table class="min-w-full divide-y divide-gray-200 bg-black shadow-md rounded-lg">
             <thead class="bg-gray-100">
@@ -14,6 +14,12 @@
                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">{{ $cliente->name }}</td>
                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">{{ $cliente->cpf }}</td>
                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">{{ $cliente->telefone }}</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">
+                        <form action="{{ route('enderecos.show', $cliente->id) }}" method="GET" style="display:inline;">
+                            @csrf
+                            <button type="submit" class="text-yellow-600 hover:underline">Ver endereço</button>
+                        </form>
+                    </td>
                 </tr>
             </tbody>
         </table>

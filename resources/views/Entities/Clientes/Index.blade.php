@@ -16,6 +16,12 @@
                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">{{ $cliente->cpf }}</td>
                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">{{ $cliente->telefone }}</td>
                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">
+                            <form action="{{ route('enderecos.show', $cliente->id) }}" method="GET" style="display:inline;">
+                                @csrf
+                                <button type="submit" class="text-yellow-600 hover:underline">Endereços</button>
+                            </form>
+                        </td> 
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">
                             <form action="{{ route('clientes.show', $cliente->id) }}" method="GET" style="display:inline;">
                                 @csrf
                                 <button type="submit" class="text-green-600 hover:underline">Ver</button>

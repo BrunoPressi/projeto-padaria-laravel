@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('cpf')->unique();
             $table->string('telefone');
             $table->timestamps();
+
         });
     }
 

@@ -21,10 +21,6 @@
                 </flux:navlist.group>
 
                 <flux:navlist.group class="grid mb-4">
-                    <flux:navlist.item icon="building-office-2" :href="route('Enderecos')" :current="request()->routeIs('Enderecos')" wire:navigate>{{ __('Endereços') }}</flux:navlist.item>
-                </flux:navlist.group>
-
-                <flux:navlist.group class="grid mb-4">
                     <flux:navlist.item icon="shopping-bag" :href="route('Produtos')" :current="request()->routeIs('Produtos')" wire:navigate>{{ __('Produtos') }}</flux:navlist.item>
                 </flux:navlist.group>
 

@@ -13,13 +13,15 @@ return new class extends Migration
     {
         Schema::create('enderecos', function (Blueprint $table) {
             $table->id();
-            $table->Integer('numero');
+            $table->timestamps();
             $table->string('rua');
+            $table->string('numero');
             $table->string('bairro');
             $table->unsignedBigInteger('fk_cliente_id');
-            $table->timestamps();
 
-            $table->foreign('fk_cliente_id')->references('id')->on('clientes')->onDelete('cascade');
+
+            $table->foreign('fk_cliente_id')->references('id')->on('clientes');
+
         });
     }
 
