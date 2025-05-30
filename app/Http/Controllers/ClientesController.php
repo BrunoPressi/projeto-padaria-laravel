@@ -51,9 +51,8 @@ class ClientesController extends Controller
     }
 
     public function index() {
-        //Obtém todos os autores do banco de dados usando o model 'Clientes'
         $clientes = Cliente::all();
-        //Retorna a view 'clientes.index' passando os autores obtidos
+        
         return view('entities.clientes.index', compact('clientes'));
     }
 

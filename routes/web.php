@@ -6,6 +6,7 @@ use App\Livewire\Settings\Profile;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ClientesController;
 use App\Http\Controllers\EnderecosController;
+use App\Http\Controllers\ProdutosController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -23,7 +24,7 @@ Route::view('Enderecos', 'entities.enderecos.Index')
     ->middleware(['auth', 'verified'])
     ->name('Enderecos');
 
-Route::view('Produtos', 'entities.produtos.Index')
+Route::view('Produtos', 'entities.produtos.index')
     ->middleware(['auth', 'verified'])
     ->name('Produtos');
 
@@ -54,5 +55,8 @@ Route::get('/enderecos/create/{id}', [EnderecosController::class, 'create'])->na
 
 Route::resource('enderecos', EnderecosController::class)
     ->only(['index', 'store', 'show', 'edit', 'update', 'destroy']);
+
+Route::resource('produtos', ProdutosController::class)
+    ->only(['index', 'store', 'show', 'edit', 'update', 'destroy', 'create']);
 
 require __DIR__.'/auth.php';

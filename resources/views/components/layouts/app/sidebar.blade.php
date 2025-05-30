@@ -21,7 +21,7 @@
                 </flux:navlist.group>
 
                 <flux:navlist.group class="grid mb-4">
-                    <flux:navlist.item icon="shopping-bag" :href="route('Produtos')" :current="request()->routeIs('Produtos')" wire:navigate>{{ __('Produtos') }}</flux:navlist.item>
+                    <flux:navlist.item icon="shopping-bag" :href="route('produtos.index')" :current="request()->routeIs('Produtos')" wire:navigate>{{ __('Produtos') }}</flux:navlist.item>
                 </flux:navlist.group>
 
                 <flux:navlist.group class="grid mb-4">
@@ -32,9 +32,6 @@
                     <flux:navlist.item icon="credit-card" :href="route('Pagamentos')" :current="request()->routeIs('Pagamentos')" wire:navigate>{{ __('Pagamentos') }}</flux:navlist.item>
                 </flux:navlist.group>
 
-                <flux:navlist.group class="grid">
-                    <flux:navlist.item icon="inbox-stack" :href="route('Estoques')" :current="request()->routeIs('Estoques')" wire:navigate>{{ __('Estoque') }}</flux:navlist.item>
-                </flux:navlist.group>
             </flux:navlist>
 
             <flux:spacer />

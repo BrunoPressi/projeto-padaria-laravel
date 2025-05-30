@@ -18,10 +18,9 @@ return new class extends Migration
             $table->Double('peso');
             $table->Date('data_vencimento');
             $table->Date('data_fabricacao');
-            $table->unsignedBigInteger('fk_estoque_id');
+            $table->Integer('quantidade_estoque');
             $table->timestamps();
 
-            $table->foreign('fk_estoque_id')->references('id')->on('estoques')->onDelete('cascade');
         });
     }
 
