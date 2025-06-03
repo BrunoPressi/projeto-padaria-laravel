@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ClientesController;
 use App\Http\Controllers\EnderecosController;
 use App\Http\Controllers\ProdutosController;
+use App\Http\Controllers\VendasController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -57,6 +58,9 @@ Route::resource('enderecos', EnderecosController::class)
     ->only(['index', 'store', 'show', 'edit', 'update', 'destroy']);
 
 Route::resource('produtos', ProdutosController::class)
+    ->only(['index', 'store', 'show', 'edit', 'update', 'destroy', 'create']);
+
+Route::resource('vendas', VendasController::class)
     ->only(['index', 'store', 'show', 'edit', 'update', 'destroy', 'create']);
 
 require __DIR__.'/auth.php';

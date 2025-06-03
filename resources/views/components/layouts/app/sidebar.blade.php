@@ -25,11 +25,7 @@
                 </flux:navlist.group>
 
                 <flux:navlist.group class="grid mb-4">
-                    <flux:navlist.item icon="shopping-cart" :href="route('Vendas')" :current="request()->routeIs('Vendas')" wire:navigate>{{ __('Vendas') }}</flux:navlist.item>
-                </flux:navlist.group>
-
-                <flux:navlist.group class="grid mb-4">
-                    <flux:navlist.item icon="credit-card" :href="route('Pagamentos')" :current="request()->routeIs('Pagamentos')" wire:navigate>{{ __('Pagamentos') }}</flux:navlist.item>
+                    <flux:navlist.item icon="shopping-cart" :href="route('vendas.index')" :current="request()->routeIs('Vendas')" wire:navigate>{{ __('Vendas') }}</flux:navlist.item>
                 </flux:navlist.group>
 
             </flux:navlist>

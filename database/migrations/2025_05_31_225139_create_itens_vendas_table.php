@@ -16,7 +16,7 @@ return new class extends Migration
             $table->unsignedBigInteger('fk_produto_id');
             $table->unsignedBigInteger('fk_vendas_id');
             $table->Integer('quantidade');
-            $table->Integer('preco_unitario');
+            $table->Double('preco_unitario');
             $table->timestamps();
 
             $table->foreign('fk_vendas_id')->references('id')->on('vendas')->onDelete('cascade');
