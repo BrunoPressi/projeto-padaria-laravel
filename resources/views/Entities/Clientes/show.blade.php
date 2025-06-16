@@ -1,4 +1,4 @@
-<x-layouts.app :title="__('Clientes Show')">
+<x-layouts.app :title="__('Cliente')">
     <h1 class="flex justify-center mb-4">Cliente</h1>
     <div class="overflow-x-auto flex justify-center">
         <table class="min-w-full divide-y divide-gray-200 bg-black shadow-md rounded-lg">
@@ -18,6 +18,19 @@
                         <form action="{{ route('enderecos.show', $cliente->id) }}" method="GET" style="display:inline;">
                             @csrf
                             <button type="submit" class="text-yellow-600 hover:underline">Ver endereço</button>
+                        </form>
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">
+                        <form action="{{ route('clientes.edit', $cliente->id) }}" method="GET" style="display:inline;">
+                            @csrf
+                            <button type="submit" class="text-blue-600 hover:underline">Editar</button>
+                        </form>
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">
+                        <form action="{{ route('clientes.destroy', $cliente->id) }}" method="POST" onsubmit="return confirm('Tem certeza que deseja excluir?')" style="display:inline;">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="text-red-600 hover:underline">Excluir</button>
                         </form>
                     </td>
                 </tr>

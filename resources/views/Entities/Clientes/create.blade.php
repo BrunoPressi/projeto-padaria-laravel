@@ -1,7 +1,7 @@
-<x-layouts.app :title="__('Cliente Create')">
+<x-layouts.app :title="__('Novo Cliente')">
     <body>
     <div class="max-w-md mx-auto p-6 bg-black rounded-lg shadow-md">
-        <h2 class="text-2xl font-semibold mb-6 text-center">Novo Cliente</h2>
+        <h2 class="text-2xl font-semibold mb-6 text-center">Adicionar novo cliente</h2>
         <form action="{{ route('clientes.store') }}" method="POST">
             @csrf
             <div class="mb-4">
@@ -32,7 +32,7 @@
             </div>
 
             <div class="flex justify-center">
-                <button type="submit" class="w-full bg-indigo-500 text-white p-2 rounded-md hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500">Enviar</button>
+                <button type="submit" class="w-full bg-indigo-500 text-white p-2 rounded-md hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500">Salvar</button>
             </div>
 
         </form>

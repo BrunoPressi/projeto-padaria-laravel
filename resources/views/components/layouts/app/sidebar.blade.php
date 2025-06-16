@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="dark">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="light">
     <head>
         @include('partials.head')
     </head>
@@ -8,7 +8,11 @@
             <flux:sidebar.toggle class="lg:hidden" icon="x-mark" />
 
             <a href="{{ route('dashboard') }}" class="mr-5 flex items-center space-x-2" wire:navigate>
-                <x-app-logo />
+                <div class="flex items-center space-x-2 px-4 mb-4">
+                    <h1 class="text-lg font-bold text-white leading-tight">
+                        Sistema de Padaria
+                    </h1>
+                </div>
             </a>
 
             <flux:navlist variant="outline">

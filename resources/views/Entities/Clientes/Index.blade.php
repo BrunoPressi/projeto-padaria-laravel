@@ -1,4 +1,4 @@
-<x-layouts.app :title="__('Clientes Index')">
+<x-layouts.app :title="__('Lista de Clientes')">
     <h1 class="flex justify-center mb-4">Clientes</h1>
     <div class="overflow-x-auto flex justify-center">
         <table class="min-w-full divide-y divide-gray-200 bg-black shadow-md rounded-lg">

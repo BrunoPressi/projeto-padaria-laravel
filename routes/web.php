@@ -8,6 +8,7 @@ use App\Http\Controllers\ClientesController;
 use App\Http\Controllers\EnderecosController;
 use App\Http\Controllers\ProdutosController;
 use App\Http\Controllers\VendasController;
+use App\Http\Controllers\itens_vendasController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -61,6 +62,11 @@ Route::resource('produtos', ProdutosController::class)
     ->only(['index', 'store', 'show', 'edit', 'update', 'destroy', 'create']);
 
 Route::resource('vendas', VendasController::class)
-    ->only(['index', 'store', 'show', 'edit', 'update', 'destroy', 'create']);
+    ->only(['index', 'store', 'show', 'create']);
+
+Route::resource('itens', itens_vendasController::class)
+    ->only(['index', 'store', 'show', 'create']);
 
 require __DIR__.'/auth.php';
+
+

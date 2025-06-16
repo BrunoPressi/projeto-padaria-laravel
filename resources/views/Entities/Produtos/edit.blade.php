@@ -1,4 +1,4 @@
-<x-layouts.app :title="__('Produto Edit')">
+<x-layouts.app :title="__('Editar Produto')">
     <body>
     <div class="max-w-md mx-auto p-6 bg-black rounded-lg shadow-md">
         <h2 class="text-2xl font-semibold mb-6 text-center">Editar Produto</h2>

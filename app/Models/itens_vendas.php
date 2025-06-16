@@ -10,10 +10,10 @@ class Itens_vendas extends Model
     protected $fillable = ['fk_produto_id', 'fk_vendas_id', 'quantidade', 'preco_unitario'];
 
     public function produto() {
-        return $this->belongsTo(Produtos::class);
+        return $this->belongsTo(Produtos::class, 'fk_produto_id');
     }
 
     public function venda() {
-        return $this->belongsTo(Vendas::class);
+        return $this->belongsTo(Vendas::class, 'fk_vendas_id');
     }
 }

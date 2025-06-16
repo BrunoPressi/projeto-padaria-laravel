@@ -6,28 +6,28 @@
             @csrf
             @method('PUT')
             <div class="mb-4">
-                <label for="name" class="block text-sm font-medium text-white-700">Rua</label>
+                <label for="rua" class="block text-sm font-medium text-white-700">Rua</label>
                 <input type="text" id="rua" name="rua" class="mt-1 p-2 w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500" value="{{$endereco->rua}}" required>
 
-                @error('name')
+                @error('rua')
                     <div class="text-red-500 text-sm mt-1">{{ $message }}</div>
                 @enderror
             </div>
 
             <div class="mb-4">
-                <label for="cpf" class="block text-sm font-medium text-white-700">Número</label>
+                <label for="numero" class="block text-sm font-medium text-white-700">Número</label>
                 <input type="text" id="numero" name="numero" class="mt-1 p-2 w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500" value="{{$endereco->numero}}" required>
 
-                @error('cpf')
+                @error('numero')
                     <div class="text-red-500 text-sm mt-1">{{ $message }}</div>
                 @enderror
             </div>
 
             <div class="mb-4">
-                <label for="telefone" class="block text-sm font-medium text-white-700">Bairro</label>
+                <label for="bairro" class="block text-sm font-medium text-white-700">Bairro</label>
                 <input type="text" id="bairro" name="bairro" class="mt-1 p-2 w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500" value="{{$endereco->bairro}}" required>
 
-                @error('telefone')
+                @error('bairro')
                     <div class="text-red-500 text-sm mt-1">{{ $message }}</div>
                 @enderror
             </div>

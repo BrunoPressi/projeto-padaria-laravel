@@ -1,4 +1,4 @@
-<x-layouts.app :title="__('Endereco Show')">
+<x-layouts.app :title="__('Ver endereço')">
     <h1 class="flex justify-center mb-4">Endereço</h1>
     <div class="overflow-x-auto flex justify-center">
         <table class="min-w-full divide-y divide-gray-200 bg-black shadow-md rounded-lg">

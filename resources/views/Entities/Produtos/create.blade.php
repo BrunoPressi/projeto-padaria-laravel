@@ -1,4 +1,4 @@
-<x-layouts.app :title="__('Produto Create')">
+<x-layouts.app :title="__('Criar Produto')">
     <body>
     <div class="max-w-md mx-auto p-6 bg-black rounded-lg shadow-md">
         <h2 class="text-2xl font-semibold mb-6 text-center">Novo Produto</h2>
@@ -8,14 +8,14 @@
                 <label for="nome" class="block text-sm font-medium text-white-700">Nome</label>
                 <input type="text" id="nome" name="nome" class="mt-1 p-2 w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
 
-                @error('name')
+                @error('nome')
                     <div class="text-red-500 text-sm mt-1">{{ $message }}</div>
                 @enderror
             </div>
 
             <div class="mb-4">
                 <label for="preco" class="block text-sm font-medium text-white-700">Preço</label>
-                <input type="text" id="preco" name="preco" class="mt-1 p-2 w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
+                <input type="number" step="0.01" id="preco" name="preco" class="mt-1 p-2 w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
 
                 @error('preco')
                     <div class="text-red-500 text-sm mt-1">{{ $message }}</div>
@@ -24,7 +24,7 @@
 
             <div class="mb-4">
                 <label for="peso" class="block text-sm font-medium text-white-700">Peso</label>
-                <input type="number" id="peso" name="peso" class="mt-1 p-2 w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
+                <input type="number" step="0.01" id="peso" name="peso" class="mt-1 p-2 w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
 
                 @error('peso')
                     <div class="text-red-500 text-sm mt-1">{{ $message }}</div>
@@ -35,7 +35,7 @@
                 <label for="dataFabricacao" class="block text-sm font-medium text-white-700">Data Fabricação</label>
                 <input type="date" id="data_fabricacao" name="data_fabricacao" class="mt-1 p-2 w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
 
-                @error('dataFabricacao')
+                @error('data_fabricacao')
                     <div class="text-red-500 text-sm mt-1">{{ $message }}</div>
                 @enderror
             </div>
@@ -44,7 +44,7 @@
                 <label for="dataVencimento" class="block text-sm font-medium text-white-700">Data Vencimento</label>
                 <input type="date" id="data_vencimento" name="data_vencimento" class="mt-1 p-2 w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
 
-                @error('dataVencimento')
+                @error('data_vencimento')
                     <div class="text-red-500 text-sm mt-1">{{ $message }}</div>
                 @enderror
             </div>
@@ -53,7 +53,7 @@
                 <label for="quantidade_estoque" class="block text-sm font-medium text-white-700">Quantidade</label>
                 <input type="number" id="quantidade" name="quantidade_estoque" class="mt-1 p-2 w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
 
-                @error('quantidade')
+                @error('quantidade_estoque')
                     <div class="text-red-500 text-sm mt-1">{{ $message }}</div>
                 @enderror
             </div>
